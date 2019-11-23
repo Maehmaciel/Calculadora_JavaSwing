@@ -6,7 +6,6 @@ public class Calculadora extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btnBinario = new javax.swing.JButton();
@@ -99,9 +98,9 @@ public class Calculadora extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void btnBinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBinarioActionPerformed
+    private void btnBinarioActionPerformed(java.awt.event.ActionEvent evt) {
         int numero = Integer.parseInt(entrada.getText());
         String result = "";
 
@@ -112,9 +111,9 @@ public class Calculadora extends javax.swing.JFrame {
         result = new StringBuilder(result).reverse().toString();
         entrada.setText(result);
 
-    }//GEN-LAST:event_btnBinarioActionPerformed
+    }
 
-    private void btnOctalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOctalActionPerformed
+    private void btnOctalActionPerformed(java.awt.event.ActionEvent evt) {
         int numero = Integer.parseInt(entrada.getText());
         String result = "";
 
@@ -127,9 +126,9 @@ public class Calculadora extends javax.swing.JFrame {
         entrada.setText(result);
 
 
-    }//GEN-LAST:event_btnOctalActionPerformed
+    }
 
-    private void btnHexaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHexaActionPerformed
+    private void btnHexaActionPerformed(java.awt.event.ActionEvent evt) {
         int numero = Integer.parseInt(entrada.getText());
         String result = "";
 
@@ -167,9 +166,9 @@ public class Calculadora extends javax.swing.JFrame {
         result = new StringBuilder(result).reverse().toString();
         entrada.setText(result);
 
-    }//GEN-LAST:event_btnHexaActionPerformed
+    }
 
-    private void entradaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_entradaKeyReleased
+    private void entradaKeyReleased(java.awt.event.KeyEvent evt) {
         String a=entrada.getText();
        int j=0;
        int i=0;
@@ -189,9 +188,9 @@ public class Calculadora extends javax.swing.JFrame {
         btnDecimal.setVisible(true);
                 }
        }
-    }//GEN-LAST:event_entradaKeyReleased
+    }
 
-    private void btnDecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDecimalActionPerformed
+    private void btnDecimalActionPerformed(java.awt.event.ActionEvent evt) {
         double um,dois,soma=0;
         double tamanho=entrada.getText().length();
         double aux=tamanho-1;
@@ -204,21 +203,12 @@ public class Calculadora extends javax.swing.JFrame {
         String s=Double.toString(soma).replaceAll(".0","");
         
         entrada.setText(s);
-    }//GEN-LAST:event_btnDecimalActionPerformed
+    }
 
-    private void btnDecimalPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_btnDecimalPropertyChange
+    private void btnDecimalPropertyChange(java.beans.PropertyChangeEvent evt) {
         btnDecimal.setVisible(false);
-    }//GEN-LAST:event_btnDecimalPropertyChange
-
-    /**
-     * @param args the command line arguments
-     */
+    }
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -235,9 +225,7 @@ public class Calculadora extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Calculadora().setVisible(true);
@@ -247,12 +235,12 @@ public class Calculadora extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+  
     private javax.swing.JButton btnBinario;
     private javax.swing.JButton btnDecimal;
     private javax.swing.JButton btnHexa;
     private javax.swing.JButton btnOctal;
     private javax.swing.JTextField entrada;
     private javax.swing.JLabel jLabel1;
-    // End of variables declaration//GEN-END:variables
+   
 }
